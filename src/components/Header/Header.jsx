@@ -3,7 +3,7 @@ import s from './Header.module.css';
 
 const Header = () => {
     return <header className={s.header}>
-        <img src="https://cache3.youla.io/files/images/780_780/59/71/5971d97a66fb0768f17dd8c4.jpg" />
+        <img src="https://public-assets.envato-static.com/assets/logos/envato_market-a5ace93f8482e885ae008eb481b9451d379599dfed24868e52b6b2d66f5cf633.svg" />
     </header>
 }
 
