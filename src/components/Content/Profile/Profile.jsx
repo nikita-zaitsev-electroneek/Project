@@ -1,15 +1,11 @@
 import React from 'react';
 import s from './Profile.module.css';
-import MyPosts from './MyPosts/MyPosts.jsx';
+import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
     return <div className={s.profile}>
-        <div>
-            <img src="https://www.sunhome.ru/i/wallpapers/68/sinie-rozi.orig.jpg"/>
-        </div>
-        <div>
-            ava + description
-        </div>
+        <ProfileInfo/>
         <MyPosts/>
     </div>
 }
