@@ -1,6 +1,10 @@
 import React from 'react';
 import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
+import Friends from "./Friends/Friends";
+import state from "../../redux/state";
+
+let friendsElements = state.dialogsPage.dialogsData.map(d => <Friends name = {d.name} id = {d.id} src = {d.src}/>);
 
 const Navbar = () => {
     return (
@@ -8,7 +12,7 @@ const Navbar = () => {
             <div className={s.item}>
                 <NavLink to='/profile' activeClassName={s.activeLink}>Profile</NavLink>
             </div>
-            <div className={`${s.item} ${s.active}`}>
+            <div className={s.item}>
                 <NavLink to='/dialogs' activeClassName={s.activeLink}>Dialogs</NavLink>
             </div>
             <div className={s.item}>
@@ -19,6 +23,12 @@ const Navbar = () => {
             </div>
             <div className={s.item}>
                 <NavLink to='/settings' activeClassName={s.activeLink}>Settings</NavLink>
+            </div>
+            <div className={s.item}>
+                Friends
+                <div className={s.friends}>
+                    {friendsElements}
+                </div>
             </div>
         </nav>
     )
